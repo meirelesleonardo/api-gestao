@@ -1,0 +1,28 @@
+# Arquivos de compilação Python
+*.pyc
+__pycache__/
+
+# Diretório do ambiente virtual
+venv/
+
+# Arquivos de configuração local
+instance/
+.vscode
+
+# Arquivos de registro
+*.log
+
+# Arquivos de banco de dados SQLite
+*.sqlite
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de cache e cache de pacotes
+.cache/
+*.egg-info/
+dist/
+build/
+
+# Arquivo sensíveis
+variabbles.py
