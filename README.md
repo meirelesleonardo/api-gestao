@@ -1,20 +1,21 @@
+# Estrutura Inicial do Projeto
 api-gestao/
 │
 ├── app/
-│   ├── __init__.py
-│   ├── controllers/
-│   │   └── __init__.py
-│   ├── models/
-│   │   └── __init__.py
-│   ├── services/
-│   │   └── __init__.py
-│   └── utils/
-│       └── __init__.py
+│ ├── init.py
+│ ├── controllers/
+│ │ └── init.py
+│ ├── models/
+│ │ └── init.py
+│ ├── services/
+│ │ └── init.py
+│ └── utils/
+│ └── init.py
 ├── config/
-│   ├── __init__.py
-│   └── settings.py
+│ ├── init.py
+│ └── settings.py
 ├── tests/
-│   └── __init__.py
+│ └── init.py
 └── run.py
 
 # Servidor de produção

@@ -3,6 +3,12 @@ import hmac
 import hashlib
 import subprocess
 
+import sys
+import os
+
+BASE_DIR = os.path.abspath('./')
+sys.path.append(BASE_DIR)
+
 from config import variabbles
 
 webhook_bp = Blueprint('webhook', __name__, url_prefix='/webhook')
@@ -19,10 +25,11 @@ def deploy():
         abort(501, "Unsupported signature type")
 
     mac = hmac.new(bytes(WEBHOOK_SECRET, 'utf-8'), msg=request.data, digestmod=hashlib.sha1)
+    assinatura = str(mac.hexdigest())
     if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
         abort(403, "Invalid signature")
 
     # Chama o script de deploy
-    subprocess.run([variabbles.DEPLOY_CONNECT_CITY])
+    #subprocess.run([variabbles.DEPLOY_CONNECT_CITY])
 
     return "Deployment started", 200

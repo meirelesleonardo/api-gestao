@@ -2,3 +2,6 @@ flask
 Flask-SQLAlchemy
 gunicorn
 flask-jwt-extended
+pytesseract
+opencv-python
+openalpr
