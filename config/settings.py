@@ -3,7 +3,7 @@ from config import variabbles
 
 
 class DevelopmentConfig:
-    DEBUG = False
+    DEBUG = True
     JWT_ACCESS_TOKEN_EXPIRES = 86400  # 1 dia    
 
     # Configurar JWT
