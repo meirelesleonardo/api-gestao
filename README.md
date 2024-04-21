@@ -1,22 +1,38 @@
 # Estrutura Inicial do Projeto
 api-gestao/
 │
-├── app/
-│ ├── init.py
-│ ├── controllers/
-│ │ └── init.py
-│ ├── models/
-│ │ └── init.py
-│ ├── services/
-│ │ └── init.py
-│ └── utils/
-│ └── init.py
+├── apps/
+│   ├── __init__.py
+|   ├── api-gestao/
+|   │   ├── __init__.py
+|   │   ├── controllers/
+|   │   │   └── __init__.py
+|   |   │   ├── models/
+|   │   │   └── __init__.py
+|   │   ├── services/
+|   │   │   └── __init__.py
+|   │   └── utils/
+|   │       └── __init__.py
 ├── config/
-│ ├── init.py
-│ └── settings.py
+│   ├── __init__.py
+│   └── settings.py
+├── presentation/
+│   ├──frontend_gestao/
+|   │   ├── static/
+|   │   │   ├── css/
+|   │   │   ├── js/
+|   │   │   └── images/
+|   │   ├── templates/
+|   │   │   ├── base.html
+|   │   │   ├── home.html
+|   │   │   └── partials/
+|   │   │       ├── header.html
+|   │   │       └── footer.html
+|   │   └── __init__.py
 ├── tests/
-│ └── init.py
+│   └── __init__.py
 └── run.py
+
 
 # Servidor de produção
 gunicorn -b 0.0.0.0:8025 wsgi:app

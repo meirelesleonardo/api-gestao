@@ -16,11 +16,11 @@ def create_app():
     jwt = JWTManager(app)
 
     # Registrar blueprints
-    from app.controllers.health_controller import health_bp # type: ignore
-    from app.controllers.webhook_controller import webhook_bp
-    from app.controllers.auth_controller import auth_bp
-    from app.controllers.example_controller import example_bp
-    from app.controllers.license_plate_controller import license_plate_bp
+    from apps.api_gestao.controllers.health_controller import health_bp # type: ignore
+    from apps.api_gestao.controllers.webhook_controller import webhook_bp
+    from apps.api_gestao.controllers.auth_controller import auth_bp
+    from apps.api_gestao.controllers.example_controller import example_bp
+    from apps.api_gestao.controllers.license_plate_controller import license_plate_bp
 
     app.register_blueprint(health_bp)
     app.register_blueprint(webhook_bp)

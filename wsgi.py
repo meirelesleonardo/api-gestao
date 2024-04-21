@@ -1,4 +1,4 @@
-from app import create_app
+from apps.api_gestao import create_app
 
 # Criar o aplicativo Flask
 app = create_app()
