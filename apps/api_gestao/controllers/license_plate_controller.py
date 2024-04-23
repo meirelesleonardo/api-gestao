@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from apps.api_gestao.services.license_plate_service import detect_license_plate
+from apps.api_gestao.app_services.license_plate_service import detect_license_plate
 import cv2
 
 license_plate_bp = Blueprint('license_plate', __name__)

@@ -15,7 +15,7 @@ def create_app():
     
     jwt = JWTManager(app)
 
-    # Registrar blueprints
+    # Registrar blueprints API
     from apps.api_gestao.controllers.health_controller import health_bp # type: ignore
     from apps.api_gestao.controllers.webhook_controller import webhook_bp
     from apps.api_gestao.controllers.auth_controller import auth_bp

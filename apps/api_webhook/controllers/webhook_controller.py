@@ -19,6 +19,12 @@ WEBHOOK_SECRET = variabbles.WEBHOOK_SECRET_DEPLOY
 def health_check():
     return jsonify({'status': 'up'})
 
+@webhook_bp.route('/check-flask-env')
+def check_flask_env():
+    flask_env = os.environ.get('FLASK_ENV')
+    debug_env = os.environ.get('FLASK_DEBUG')
+    return jsonify({'FLASK_ENV': flask_env, 'FLASK_DEBUG':debug_env})
+
 @webhook_bp.route('/deploy-connect-city', methods=['POST'])
 def deploy_connect_city():
     signature = request.headers.get('X-Hub-Signature')
